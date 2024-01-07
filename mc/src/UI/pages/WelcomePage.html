@@ -52,10 +52,26 @@
         50% { transform: rotate(-25deg) scale(1.1); }
     }
 </style>
+<script>
+    function a() {
+    var jumptext = [
+        "Subscribe :D",
+        "Hello world",
+        "Look, a pig!",
+        "Schwarzer Regen"
+    ];
+    var sel = jumptext[Math.floor(Math.random()*4)];
+    // alert(sel);
+    var it = document.getElementById("jumpt");
+    it.innerHTML = sel;
+    }
+</script>
 <canvas id="background-canvas">Your browser does not support canvas. Please upgrade your browser.</canvas>
 <img width="512" height="64" src="./texture/title.png" />
+<mc-button onclick="a()">Reset</mc-button>
 <p class="mc-bouncing-text" id="jumpt">Hello</p>
 <ul>
+    
     <li><mc-button gotoPage="select-world">Singleplayer</mc-button></li>
     <li><mc-button onclick="alert('Forbidden')">Multiplayer</mc-button></li>
     <li><mc-button onclick="alert('Invalid session id')">Realms</mc-button></li>
