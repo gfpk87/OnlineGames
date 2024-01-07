@@ -12,16 +12,6 @@ class WelcomePage extends Page {
         this.renderer = null;
     };
     onConnected() {
-        var jumptext = [
-            "Subscribe :D",
-            "Hello world",
-            "Look, a pig!",
-            "Schwarzer Regen"
-        ];
-        var sel = jumptext[Math.floor(Math.random()*4)];
-        // alert(sel);
-        var it = document.getElementById("jumpt");
-        it.innerHTML = sel;
         this.renderer = new WelcomeRenderer(this.bgCanvas);
         this.renderer.play();
         settings.addEventListener("changedValue", this.updateBlur);
